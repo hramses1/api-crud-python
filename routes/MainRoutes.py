@@ -1,13 +1,10 @@
 #--------------------------------------------#
 from fastapi import APIRouter
-from starlette.status import HTTP_200_OK
-from starlette.status import HTTP_204_NO_CONTENT
+from starlette.status import HTTP_200_OK,HTTP_204_NO_CONTENT
 #--------------------------------------------#
 from services.MainServices import MainServices
-from models.user_model import UserCiModel
-from models.user_model import InsertUserModel
+from models.user_model import InsertUserModel,UserCiModel
 #--------------------------------------------#
-
 ##uvicorn app:app --reload
 main = APIRouter(prefix="/api/main")
 #-----------------------------------------------------#

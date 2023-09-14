@@ -57,9 +57,8 @@ class MainServices:
             return(f"Error al eliminar el usuario de la base de datos: {str(e)}")
         finally:
             self.cur.close()
+    #-----------------------------------------------------#
     def UpdateUser(self,user_id, usuario: InsertUserModel):
-        print(user_id)
-        print(usuario)
         try:
             self.cur.execute("""
                 UPDATE Users
@@ -72,3 +71,4 @@ class MainServices:
             return(f"Error al actualizar datos en la base de datos: {str(e)}")
         finally:
             self.cur.close()
+    #-----------------------------------------------------#

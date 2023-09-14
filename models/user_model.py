@@ -1,5 +1,6 @@
+#-----------------------------------------------------#
 from pydantic import BaseModel
-
+#-----------------------------------------------------#
 class UserModel(BaseModel):
     id: int
     nombre : str
@@ -8,9 +9,10 @@ class UserModel(BaseModel):
     ci: int
     estado_civil:str
     fecha_nac: str
-    
+#-----------------------------------------------------#
 class UserCiModel(BaseModel):
     ci:int
+#-----------------------------------------------------#
 class InsertUserModel(BaseModel):
     nombre : str
     apellido: str
@@ -18,3 +20,4 @@ class InsertUserModel(BaseModel):
     ci: int
     estado_civil:str
     fecha_nac: str
+#-----------------------------------------------------#
