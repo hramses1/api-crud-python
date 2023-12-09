@@ -1,0 +1,12 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: api-crud-python
+    src: ./
+    engine: python3.9
+    primary: true
+    commands:
+      - pip install -r requirements.txt
+    run: uvicorn app:app --reload
+    public_routes:
+      - "/*"
